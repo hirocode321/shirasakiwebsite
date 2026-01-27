@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星への階段を、のぼりはじめる。｜白崎星空プロジェクト</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        /* カラーパレットの設定 */
+        :root {
+            --midnight-blue: #0a1128;
+            --limestone-white: #e3e4db;
+            --starry-silver: #b0b3b8;
+            --lantern-amber: #ffbf00;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            background-color: var(--midnight-blue);
+            color: var(--limestone-white);
+            font-family: 'Noto Serif JP', serif;
+            line-height: 1.8;
+            scroll-behavior: smooth;
+        }
+
+        /* ヒーローセクション（螺旋階段の写真） */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(rgba(10, 17, 40, 0.4), rgba(10, 17, 40, 0.4)),
+                url('path_to_your_main_image.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            letter-spacing: 0.2em;
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: var(--starry-silver);
+            animation: fadeIn 5s ease-in-out;
+        }
+
+        /* コンテンツセクション */
+        section {
+            padding: 100px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            border-bottom: 1px solid var(--starry-silver);
+            padding-bottom: 10px;
+            margin-bottom: 40px;
+            color: var(--starry-silver);
+        }
+
+        /* フッター（県庁メッセージ） */
+        footer {
+            background: linear-gradient(to bottom, var(--midnight-blue), #1a2a4a);
+            padding: 80px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 191, 0, 0.3);
+        }
+
+        .staff-message {
+            max-width: 600px;
+            margin: 0 auto;
+            font-style: italic;
+            color: var(--limestone-white);
+        }
+
+        .staff-name {
+            margin-top: 20px;
+            color: var(--lantern-amber);
+            font-size: 0.9rem;
+        }
+
+        /* アニメーション */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            animation: bounce 2s infinite;
+            color: var(--limestone-white);
+            text-decoration: none;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-10px);
+            }
+
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero">
+        <h1>星への階段を、のぼりはじめる。</h1>
+        <p>Shirasaki Starry Sky Project.</p>
+        <a href="#intro" class="scroll-down">↓</a>
+    </header>
+
+    <section id="intro">
+        <h2 class="section-title">はじまりのことば</h2>
+        <p>
+            12月、白い岩肌が月の光を反射する夜でした。<br>
+            和歌山県庁のみなさんと、白崎の空を見上げました。<br><br>
+            「この暗さを、守っていきたいですね」<br><br>
+            そこから、このプロジェクトは静かに動き出しました。<br>
+            ここは、2億年の歴史と宇宙の時間が交差する場所。<br>
+            私たちが踏み出した一歩を、ゆっくりと記していきます。
+        </p>
+    </section>
+
+    <section id="place">
+        <h2 class="section-title">白の記憶：白崎海洋公園</h2>
+        <div class="content-wrapper">
+            <p>
+                氷河期以前の地球が残した、白い石灰岩の岬。<br>
+                2億年前のサンゴ礁からなるこの地は、夜、星の光を淡く照り返します。<br>
+                「日本のエーゲ海」と呼ばれるこの美しさは、宇宙と地球が対話するための特別なステージです。
+            </p>
+        </div>
+    </section>
+
+    <section id="town">
+        <h2 class="section-title">星を抱く町：和歌山県由良町</h2>
+        <div class="content-wrapper">
+            <p>
+                万葉の時代から続く、由良（ゆら）の風景。<br>
+                波の音と、山の息吹。ここには、星空を邪魔する過剰な明かりはありません。<br>
+                地元の人々が大切に守ってきたこの静かな夜こそが、私たちの誇りです。<br>
+                由良みかんの香りが漂うこの町全体で、私たちは星空を見守っています。
+            </p>
+        </div>
+    </section>
+
+    <section id="contest">
+        <h2 class="section-title">あなたのレンズで、魅力を再発見する。</h2>
+        <div
+            style="background: rgba(255, 255, 255, 0.05); padding: 30px; border-radius: 10px; border-left: 4px solid var(--lantern-amber);">
+            <h3>由良星空フォトコンテスト 2026</h3>
+            <p>「ことこらぼ」の提案から生まれた、最初の社会実装プロジェクトです。</p>
+
+            <div style="margin: 20px 0;">
+                <strong>【応募期間】</strong><br>
+                令和8年2月1日(日) 〜 3月31日(火)
+            </div>
+
+            <div style="margin: 20px 0;">
+                <strong>【参加方法】</strong>
+                <ol style="padding-left: 20px; font-size: 0.9rem;">
+                    <li>公式Instagram <span style="color: var(--lantern-amber);">@yura_hoshizora</span> をフォロー</li>
+                    <li>「#由良の星空2026」「#由良町」を付けて投稿</li>
+                    <li>機種名（スマホOK）と写真への想いを添えてください</li>
+                </ol>
+            </div>
+
+            <p style="font-size: 0.8rem; color: var(--starry-silver);">
+                最優秀賞には、由良の魅力を堪能できる「絶景パッケージツアー」をご用意しています。
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="staff-message">
+            「初めてこの階段を登ったとき、見上げた空の近さに言葉を失いました。<br>
+            この感動を、未来の和歌山に繋いでいきたい。<br>
+            一緒に見守っていただけたら、とても心強いです。」
+        </div>
+        <div class="staff-name">From: 和歌山県庁 星空プロジェクトチーム</div>
+        <p style="font-size: 0.7rem; margin-top: 50px; color: var(--starry-silver);">
+            &copy; 2026 Shirasaki Starry Sky Project. Photos by [Your Name]
+        </p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星への階段を、のぼりはじめる。｜白崎星空プロジェクト</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --midnight-blue: #0a1128;
+            --limestone-white: #e3e4db;
+            --starry-silver: #b0b3b8;
+            --lantern-amber: #ffbf00;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            background-color: var(--midnight-blue);
+            color: var(--limestone-white);
+            font-family: 'Noto Serif JP', serif;
+            line-height: 1.8;
+            scroll-behavior: smooth;
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(rgba(10, 17, 40, 0.4), rgba(10, 17, 40, 0.4)),
+                url('path_to_your_main_image.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            letter-spacing: 0.2em;
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: var(--starry-silver);
+            animation: fadeIn 5s ease-in-out;
+        }
+
+        section {
+            padding: 100px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            border-bottom: 1px solid var(--starry-silver);
+            padding-bottom: 10px;
+            margin-bottom: 40px;
+            color: var(--starry-silver);
+        }
+
+        .emphasis {
+            color: var(--lantern-amber);
+            font-weight: 600;
+        }
+
+        .roadmap {
+            border-left: 1px solid var(--starry-silver);
+            padding-left: 25px;
+            margin: 40px 0;
+        }
+
+        .roadmap-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .roadmap-item::before {
+            content: '';
+            position: absolute;
+            left: -31px;
+            top: 10px;
+            width: 10px;
+            height: 10px;
+            background: var(--lantern-amber);
+            border-radius: 50%;
+        }
+
+        .roadmap-year {
+            font-weight: 600;
+            color: var(--lantern-amber);
+            display: block;
+        }
+
+        footer {
+            background: linear-gradient(to bottom, var(--midnight-blue), #1a2a4a);
+            padding: 80px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 191, 0, 0.3);
+        }
+
+        .staff-message {
+            max-width: 600px;
+            margin: 0 auto;
+            font-style: italic;
+            color: var(--limestone-white);
+        }
+
+        .staff-name {
+            margin-top: 20px;
+            color: var(--lantern-amber);
+            font-size: 0.9rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            animation: bounce 2s infinite;
+            color: var(--limestone-white);
+            text-decoration: none;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-10px);
+            }
+
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero">
+        <h1>星への階段を、のぼりはじめる。</h1>
+        <p>Shirasaki Starry Sky Project.</p>
+        <a href="#intro" class="scroll-down">↓</a>
+    </header>
+
+    <section id="intro">
+        <h2 class="section-title">はじまりは、一目惚れ。</h2>
+        <p>
+            このプロジェクトは、JR西日本が主催する地域活性化プログラム「ことこらぼ」から生まれました。<br>
+            由良町職員や県内企業のメンバーが白崎の空に「一目惚れ」したあの日から、3年後の『星空保護区』認定を目指す挑戦が始まりました。
+        </p>
+        <p>
+            万葉の時代から愛された「由良の門」の風景を、次の100年も、その先も残していくために。<br>
+            私たちは今、この空を見守る仲間を探しています。
+        </p>
+    </section>
+
+    <section id="shirasaki">
+        <h2 class="section-title">地球が刻んだ、白の記憶。</h2>
+        <p>
+            「日本のエーゲ海」と称される、白崎海洋公園。<br>
+            一面に広がる白い岩肌は、古生代（約2億5000万年前）の石灰岩でできています。
+        </p>
+        <p>
+            人間が入り込む隙がないほどダイナミックな造形美。群青色の海と、真っ白な岩のコントラスト。<br>
+            夜、その「白」が星明かりを反射するとき、私たちは地球という惑星の記憶に触れることができます。<br>
+            キャンプ場や道の駅を拠点に、この地でしか味わえない<span class="emphasis">「漆黒の夜と白の静寂」</span>を、ぜひ体験してください。
+        </p>
+    </section>
+
+    <section id="roadmap">
+        <h2 class="section-title">3年後の約束。</h2>
+        <div class="roadmap">
+            <div class="roadmap-item">
+                <span class="roadmap-year">2026年：再発見の年</span>
+                フォトコンテストや観察会を通じて、まずはみんなでこの空の美しさを共有します。
+            </div>
+            <div class="roadmap-item">
+                <span class="roadmap-year">2027年：環境を整える年</span>
+                照明調査や改修を行い、星空に優しい「暗闇のデザイン」を実装していきます。
+            </div>
+            <div class="roadmap-item">
+                <span class="roadmap-year">2028年：未来へ繋ぐ年</span>
+                「星空保護区」の正式認定を目指し、世界に誇れる星空の聖地を確立します。
+            </div>
+        </div>
+    </section>
+
+    <section id="contest">
+        <a href="photocontest.html">
+            <h2 class="section-title">由良星空フォトコンテスト 2026</h2>
+        </a>
+        <div
+            style="background: rgba(255, 255, 255, 0.05); padding: 30px; border-radius: 10px; border-left: 4px solid var(--lantern-amber);">
+            <p>あなたのレンズが捉えた、由良の星空を教えてください。</p>
+            <div style="margin: 20px 0;">
+                <strong>【期間】</strong> 令和8年2月1日 〜 3月31日<br>
+                <strong>【方法】</strong> Instagram <span class="emphasis">@yura_hoshizora</span>
+                をフォローし、「#由良の星空2026」「#由良町」を付けて投稿。
+            </div>
+            <p style="font-size: 0.8rem; color: var(--starry-silver);">
+                最優秀賞：由良町絶景パッケージツアー贈呈
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="staff-message">
+            「地域の方々と一緒に、この事業を進めていければと思っています。<br>
+            初めてこの階段を登ったとき、見上げた空の近さに言葉を失いました。<br>
+            この感動を、未来の和歌山に繋いでいきたい。」
+        </div>
+        <div class="staff-name">From: 福村 優希（由良町職員）＆ ことこらぼプロジェクトチーム</div>
+        <p style="font-size: 0.7rem; margin-top: 50px; color: var(--starry-silver);">
+            &copy; 2026 Shirasaki Starry Sky Project. Photos by [Hiroaki Sekioka]<br>
+            Reference: <a href="https://shirasaki.or.jp/" style="color: var(--starry-silver);">白崎海洋公園 公式サイト</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
