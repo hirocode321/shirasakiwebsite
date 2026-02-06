@@ -15,7 +15,9 @@
     --transition-speed: 0.3s;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -43,7 +45,12 @@ a {
 /* =================================================================*********
    Typography & Utilities
    ================================================================********** */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
     font-weight: 600;
 }
@@ -142,7 +149,7 @@ p {
 
 .hero {
     background-image: linear-gradient(rgba(10, 17, 40, 0.4), rgba(10, 17, 40, 0.4)),
-                      url('path_to_your_main_image.jpg');
+        url('../images/path_to_your_main_image.jpg');
 }
 
 .hero h1 {
@@ -150,7 +157,7 @@ p {
     letter-spacing: 0.2em;
     margin-bottom: 1rem;
     font-weight: 300;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     animation: fadeIn 3s ease-in-out;
 }
 
@@ -162,14 +169,14 @@ p {
 
 .contest-hero {
     background-image: linear-gradient(to bottom, rgba(5, 10, 26, 0.5), rgba(10, 17, 40, 0.5)),
-                      url('top.jpg');
+        url('../images/top.jpg');
 }
 
 .contest-hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: var(--lantern-amber);
-    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     animation: fadeIn 3s ease-in-out;
 }
 
@@ -232,6 +239,7 @@ p {
     display: block;
     text-decoration: none;
 }
+
 .contest-link-wrapper:hover .section-title {
     color: var(--lantern-amber);
     border-color: var(--lantern-amber);
@@ -268,7 +276,7 @@ p {
 
 .step-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     border-color: rgba(255, 191, 0, 0.3);
 }
 
@@ -307,7 +315,8 @@ table {
     overflow: hidden;
 }
 
-th, td {
+th,
+td {
     padding: 18px;
     border-bottom: 1px solid rgba(176, 179, 184, 0.1);
     text-align: left;
@@ -382,24 +391,48 @@ footer {
    Animations
    ================================================================********** */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-10px); }
-    60% { transform: translateY(-5px); }
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .hero h1, .contest-hero h1 {
+
+    .hero h1,
+    .contest-hero h1 {
         font-size: 1.8rem;
     }
+
     .section-title {
         font-size: 1.5rem;
     }
+
     .container {
         padding: 40px 20px;
     }
