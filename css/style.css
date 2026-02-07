@@ -149,7 +149,7 @@ p {
 
 .hero {
     background-image: linear-gradient(rgba(10, 17, 40, 0.4), rgba(10, 17, 40, 0.4)),
-        url('../images/path_to_your_main_image.jpg');
+        url('../images/hp_top.jpg');
 }
 
 .hero h1 {
@@ -169,7 +169,7 @@ p {
 
 .contest-hero {
     background-image: linear-gradient(to bottom, rgba(5, 10, 26, 0.5), rgba(10, 17, 40, 0.5)),
-        url('../images/top.jpg');
+        url('../images/photocontest_top.jpg');
 }
 
 .contest-hero h1 {
@@ -435,5 +435,90 @@ footer {
 
     .container {
         padding: 40px 20px;
+    }
+}
+
+/* =================================================================*********
+   Judge Section
+   ================================================================********** */
+.judge-profile {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    background: var(--glass-bg);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--glass-border);
+}
+
+.judge-image {
+    flex: 0 0 200px;
+    text-align: center;
+}
+
+.judge-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--lantern-amber);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.judge-info {
+    flex: 1;
+}
+
+.judge-info h3 {
+    color: var(--lantern-amber);
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    border-bottom: 1px solid rgba(255, 191, 0, 0.2);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.judge-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-link {
+    display: inline-block;
+    padding: 8px 25px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--lantern-amber);
+    color: var(--lantern-amber);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+}
+
+.social-link:hover {
+    background: var(--lantern-amber);
+    color: var(--midnight-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 191, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .judge-profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .judge-info h3 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .judge-social {
+        justify-content: center;
     }
 }
