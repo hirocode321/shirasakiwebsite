@@ -439,55 +439,88 @@ footer {
 }
 
 /* =================================================================*********
-   Judge Section
+   Judge Section (Mobile First)
    ================================================================********** */
 .judge-profile {
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+    flex-direction: column; /* Mobile first: Column */
+    gap: 20px;
     align-items: center;
     background: var(--glass-bg);
-    padding: 30px;
+    padding: 24px;
     border-radius: 12px;
     border: 1px solid var(--glass-border);
+    margin-bottom: 30px;
 }
 
 .judge-image {
-    flex: 0 0 200px;
-    text-align: center;
+    flex: 0 0 auto;
 }
 
 .judge-image img {
-    width: 200px;
-    height: 200px;
+    width: 160px; /* Slightly smaller for mobile */
+    height: 160px;
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid var(--lantern-amber);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    max-width: 100%;
 }
 
 .judge-info {
-    flex: 1;
+    text-align: center; /* Mobile first: Centered */
+}
+
+.judge-role {
+    font-size: 0.8rem;
+    color: var(--midnight-blue);
+    background: var(--lantern-amber);
+    padding: 4px 12px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 12px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    box-shadow: 0 2px 8px rgba(255, 191, 0, 0.2);
 }
 
 .judge-info h3 {
-    color: var(--lantern-amber);
+    color: var(--limestone-white);
     margin-bottom: 15px;
-    font-size: 1.4rem;
-    border-bottom: 1px solid rgba(255, 191, 0, 0.2);
-    padding-bottom: 10px;
-    display: inline-block;
+    font-size: 1.3rem;
+    display: block;
+}
+
+.judge-info h3 .en-name {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--starry-silver);
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.catchphrase {
+    color: var(--lantern-amber);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    line-height: 1.5;
 }
 
 .judge-social {
     display: flex;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 12px;
+    margin-top: 24px;
+    justify-content: center;
 }
 
 .social-link {
-    display: inline-block;
-    padding: 8px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
+    min-height: 44px; /* Touch target minimum */
+    padding: 0 20px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--lantern-amber);
     color: var(--lantern-amber);
@@ -495,30 +528,59 @@ footer {
     font-size: 0.9rem;
     font-weight: 600;
     transition: all 0.3s ease;
-    text-decoration: none;
-    letter-spacing: 0.05em;
 }
 
 .social-link:hover {
     background: var(--lantern-amber);
     color: var(--midnight-blue);
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(255, 191, 0, 0.3);
 }
 
-@media (max-width: 768px) {
+/* Process Section Helpers */
+.process-list {
+    font-size: 0.9rem;
+    padding-left: 20px;
+    color: var(--starry-silver);
+    text-align: left;
+    margin-top: 10px;
+}
+
+.process-list li {
+    margin-bottom: 8px;
+}
+
+/* PC Design Adjustments (768px+) */
+@media (min-width: 768px) {
     .judge-profile {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row; /* Horizontal layout */
+        text-align: left;
+        padding: 40px;
+        gap: 40px;
+        align-items: flex-start;
+    }
+
+    .judge-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .judge-info {
+        text-align: left;
     }
 
     .judge-info h3 {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+        font-size: 1.6rem;
+        border-bottom: 1px solid rgba(255, 191, 0, 0.2);
+        padding-bottom: 12px;
+        display: inline-block;
+    }
+
+    .judge-info h3 .en-name {
+        display: inline;
+        margin-left: 15px;
     }
 
     .judge-social {
-        justify-content: center;
+        justify-content: flex-start;
     }
-}
+}
