@@ -47,7 +47,10 @@
                 <p>2つの指定ハッシュタグを付けて写真を投稿。<br>
                     <strong id="hashtags">#由良の星空2026 #由良町</strong>
                 </p>
-                <button id="copy-btn" class="btn-sm">ハッシュタグをコピー</button>
+                <button id="copy-btn" class="btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    <span>ハッシュタグをコピー</span>
+                </button>
             </div>
             <div class="step-card">
                 <span class="step-number">3</span>
@@ -200,11 +203,11 @@
             const hashtags = document.getElementById('hashtags').innerText;
             navigator.clipboard.writeText(hashtags).then(() => {
                 const btn = document.getElementById('copy-btn');
-                const originalText = btn.innerText;
-                btn.innerText = 'コピーしました！';
+                const originalHTML = btn.innerHTML;
+                btn.innerHTML = '<span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><polyline points="20 6 9 17 4 12"></polyline></svg> コピーしました！</span>';
                 btn.classList.add('copied');
                 setTimeout(() => {
-                    btn.innerText = originalText;
+                    btn.innerHTML = originalHTML;
                     btn.classList.remove('copied');
                 }, 2000);
             });
