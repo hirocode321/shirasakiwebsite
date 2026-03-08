@@ -583,4 +583,30 @@ footer {
     .judge-social {
         justify-content: flex-start;
     }
-}
+}
+/* Copy Hashtag Button */
+.btn-sm {
+    display: inline-block;
+    background: transparent;
+    border: 1px solid var(--starry-silver);
+    color: var(--starry-silver);
+    padding: 6px 15px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-sm:hover {
+    border-color: var(--lantern-amber);
+    color: var(--lantern-amber);
+    background: rgba(255, 191, 0, 0.05);
+}
+
+.btn-sm.copied {
+    background: var(--lantern-amber);
+    border-color: var(--lantern-amber);
+    color: var(--midnight-blue);
+}
