@@ -8,6 +8,8 @@
     <title>由良星空フォトコンテスト 2026｜由良町星空ブランディングプロジェクト</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
@@ -137,8 +139,15 @@
                     現在は、Sony αアカデミー講師を務めるほか、共著『今夜星がみたくなる 夜空の手帳』（東京書籍）の出版、記事執筆、講演など、星景写真の普及に尽力している。
                 </p>
                 <div class="judge-social">
-                    <a href="https://www.instagram.com/hirography_321" target="_blank" class="social-link">Instagram</a>
-                    <a href="https://x.com/hirography_321" target="_blank" class="social-link">X</a>
+                    <a href="https://www.instagram.com/hirography_321" target="_blank" class="social-link" title="Instagram">
+                        <i data-lucide="instagram"></i>
+                    </a>
+                    <a href="https://x.com/hirography_321" target="_blank" class="social-link" title="X">
+                        <i data-lucide="twitter"></i>
+                    </a>
+                    <a href="https://hiroakiseikoka.com" target="_blank" class="social-link" title="Website">
+                        <i data-lucide="globe"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -204,6 +213,9 @@
     </footer>
 
     <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
         document.getElementById('copy-btn').addEventListener('click', function () {
             const hashtags = document.getElementById('hashtags').innerText;
             navigator.clipboard.writeText(hashtags).then(() => {

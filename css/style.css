@@ -704,7 +704,7 @@ footer {
 
 .judge-social {
     display: flex;
-    gap: 12px;
+    gap: 16px;
     margin-top: 24px;
     justify-content: center;
 }
@@ -713,22 +713,26 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 120px;
-    min-height: 44px; /* Touch target minimum */
-    padding: 0 20px;
+    width: 44px;
+    height: 44px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--lantern-amber);
     color: var(--lantern-amber);
-    border-radius: 50px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    border-radius: 50%;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .social-link:hover {
     background: var(--lantern-amber);
     color: var(--midnight-blue);
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 191, 0, 0.4);
+}
+
+.social-link i,
+.social-link svg {
+    width: 20px;
+    height: 20px;
 }
 
 /* Process Section Helpers */
@@ -900,7 +904,7 @@ footer {
 
 .judge-social {
     display: flex;
-    gap: 12px;
+    gap: 16px;
     margin-top: 24px;
     justify-content: center;
 }
@@ -909,22 +913,26 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 120px;
-    min-height: 44px; /* Touch target minimum */
-    padding: 0 20px;
+    width: 44px;
+    height: 44px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--lantern-amber);
     color: var(--lantern-amber);
-    border-radius: 50px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    border-radius: 50%;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .social-link:hover {
     background: var(--lantern-amber);
     color: var(--midnight-blue);
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 191, 0, 0.4);
+}
+
+.social-link i,
+.social-link svg {
+    width: 20px;
+    height: 20px;
 }
 
 /* Process Section Helpers */
@@ -985,7 +993,7 @@ footer {
     border: 1px solid rgba(176, 179, 184, 0.3);
     color: var(--starry-silver);
     padding: 8px 20px;
-    border-radius: 50px;
+    border-radius: 50%;
     font-size: 0.85rem;
     font-weight: 600;
     cursor: pointer;
