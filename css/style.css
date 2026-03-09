@@ -646,6 +646,8 @@ footer {
     border-radius: 12px;
     border: 1px solid var(--glass-border);
     margin-bottom: 30px;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .judge-image {
@@ -664,6 +666,9 @@ footer {
 
 .judge-info {
     text-align: center; /* Mobile first: Centered */
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .judge-role {
